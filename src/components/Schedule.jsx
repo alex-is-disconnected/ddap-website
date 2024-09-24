@@ -3,7 +3,7 @@ import Papa from "papaparse";
 
 function Schedule() {
   const sheetURL =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQeZibHLW1SoDp0jv4NgJdSbGE0cNrVaoV_a1dNxO5QauNp23L0cyXfBQzseTYAvW3swmh_M3jLi9uJ/pub?output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ2HmMzSp-fzXfyhTXkTHZ7p-h9R9osPbOVvV8vR9_PK7flc0sh_s10t5nPg4FaH2CF_W2N06QpYxNt/pub?gid=1482207102&single=true&output=csv";
 
   const fileParsing = () =>
     new Promise((resolve) => {
@@ -57,15 +57,15 @@ function Schedule() {
           </div>
         </div>
       </div>
-    `
-    return template
- 
-    ;
+    `;
+    return template;
   };
 
   const loadArticle = (event) => {
     handleShowAllEvents();
-    document.getElementById("all-events").innerHTML = generateDescriptive(data[parseInt(event.target.dataset.index)]);
+    document.getElementById("all-events").innerHTML = generateDescriptive(
+      data[parseInt(event.target.dataset.index)]
+    );
   };
 
   const hide = () => {
@@ -74,47 +74,71 @@ function Schedule() {
   };
 
   const toggleShowChildren = () => {
-    document.getElementById('filtered-events').classList.toggle('hide-children')
+    document
+      .getElementById("filtered-events")
+      .classList.toggle("hide-children");
 
-    const hideButton = document.getElementById('show-more');
+    const hideButton = document.getElementById("show-more");
 
     if (hideButton.innerHTML === "More") {
-      hideButton.innerHTML = "Less"
+      hideButton.innerHTML = "Less";
     } else {
-      hideButton.innerHTML = "More"
+      hideButton.innerHTML = "More";
     }
-  }
+  };
 
   return (
     <>
       <h2 className="section-title">Upcoming Events:</h2>
       <div id="filtered-events" className="hide-children">
         {data.map((item, index) => (
-          <div key={index} data-index={index} className="event" onClick={loadArticle}>
+          <div
+            key={index}
+            data-index={index}
+            className="event"
+            onClick={loadArticle}
+          >
             <div data-index={index} className="event-details">
-              <h2 data-index={index} className="event-title">{item["event"]}</h2>
+              <h2 data-index={index} className="event-title">
+                {item["event"]}
+              </h2>
               <div data-index={index} className="event-type">
                 {item["type"]} • {item["subject"]}
               </div>
 
               <div data-index={index} className="event-links">
-                <a data-index={index} className="event-link" href={item["link1"]}>
+                <a
+                  data-index={index}
+                  className="event-link"
+                  href={item["link1"]}
+                >
                   {item["link1title"]}
                 </a>
-                <a data-index={index} className="event-link" href={item["link2"]}>
+                <a
+                  data-index={index}
+                  className="event-link"
+                  href={item["link2"]}
+                >
                   {item["link2title"]}
                 </a>
               </div>
             </div>
             <div data-index={index} className="event-date">
-              <div data-index={index} className="event-month">{item["month"]}</div>
-              <div data-index={index} className="event-day"> {item["date"]}</div>
+              <div data-index={index} className="event-month">
+                {item["month"]}
+              </div>
+              <div data-index={index} className="event-day">
+                {" "}
+                {item["date"]}
+              </div>
             </div>
           </div>
         ))}
       </div>
       <div id="button-wrapper">
-        <button id="show-more" onClick={toggleShowChildren}>More</button>
+        <button id="show-more" onClick={toggleShowChildren}>
+          More
+        </button>
       </div>
       <div id="body-wrapper" onClick={hide} className="hidden">
         <div id="all-events" className="hidden"></div>

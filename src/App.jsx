@@ -1,13 +1,10 @@
+import { useState } from "react";
 import Garden from "./components/Garden.jsx";
 import Instagram from "./components/Instagram.jsx";
 import Schedule from "./components/Schedule.jsx";
 import Team from "./components/Team.jsx";
-import Arena from "./components/Arena.jsx"
-
-import React, { useState } from "react";
-
+import Arena from "./components/Arena.jsx";
 import "./App.css";
-("");
 
 window.onbeforeunload = () => {
   window.scrollTo(0, 0);
@@ -49,16 +46,13 @@ function App() {
             web design, UX and creative coding.
           </p>
           <p className="what-we-do">
-            We meet on <u>Wednesdays from 4-6pm,</u> either hosting guest
+            We meet on <u>Thursdays from 4-6pm,</u> either hosting guest
             speakers, live demos or sharing our work
           </p>
           <p>Our meetings are open to everyone !</p>
           <p>
             We send out weekly{" "}
-            <a
-              href="https://forms.gle/R66VYV9Qq81R2YU68"
-              target="_blank"
-            >
+            <a href="https://forms.gle/MxhJQVjBCwCvPM3L6" target="_blank">
               e-mail updates
             </a>{" "}
             about upcoming events ꕤꕤꕤꕤꕤ <br />
@@ -76,7 +70,7 @@ function App() {
           </div>
         </section>
         <section>
-            <Arena />
+          <Arena />
         </section>
         <section>
           <h2 className="section-title">Leadership</h2>
