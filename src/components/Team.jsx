@@ -5,50 +5,57 @@ const Team = () => {
   const teamMembers = [
     {
       headshot:
-        "https://image-gosting.s3.amazonaws.com/ddap/polaroid+graeme.png",
-      name: "Graeme Mounsey",
+        "../src/polaroids/Jennifer Lee - President.png",
+      name: "Jennifer Lee",
       title: "President",
       id: "pic1",
     },
     {
-      headshot: "https://image-gosting.s3.amazonaws.com/ddap/polaroid+alex.png",
-      name: "Alex Silva",
+      headshot: "../src/polaroids/Deeva Thomas - Vice President.png",
+      name: "Deeva Thomas",
       title: "Vice President",
       id: "pic2",
     },
     {
       headshot:
-        "https://image-gosting.s3.amazonaws.com/ddap/polaroid+lakeisha.png",
-      name: "Lakeisha Sharonina",
+        "../src/polaroids/Mark Wong - Designer.png",
+      name: "Mark Wong",
       title: "Head of Design",
       id: "pic3",
     },
     {
-      headshot: "https://image-gosting.s3.amazonaws.com/ddap/hope.png",
-      name: "Hope Kim",
+      headshot: "../src/polaroids/Ketana Anekar - Treasurer.png",
+      name: "Ketana Anekar",
       title: "Treasurer",
       id: "pic4",
     },
     {
       headshot:
-        "https://image-gosting.s3.amazonaws.com/ddap/polaroid+deeva.png",
-      name: "Deeva Thomas",
-      title: "Coordinator",
+        "../src/polaroids/Minkyung Cho - Developer.png",
+      name: "Minkyung Cho",
+      title: "Developer",
       id: "pic5",
     },
     {
       headshot:
-        "https://image-gosting.s3.amazonaws.com/ddap/polaroid+thiha.jpg",
-      name: "Thiha Min Zin",
-      title: "In-House Designer",
+        "../src/polaroids/charis pao.png",
+      name: "Charis Pao",
+      title: "Media Director",
       id: "pic6",
     },
     {
       headshot:
-        "",
-      name: "Jennifer Lee",
-      title: "In-House Designer",
+        "../src/polaroids/Reika Oh - Media Director.png",
+      name: "Reika Oh",
+      title: "Media Director",
       id: "pic7",
+    },
+    {
+      headshot:
+        "../src/polaroids/Joseph Crosthwaite - Operations.png",
+      name: "Joseph Crosthwaite",
+      title: "Operations",
+      id: "pic8",
     }
   ];
 
